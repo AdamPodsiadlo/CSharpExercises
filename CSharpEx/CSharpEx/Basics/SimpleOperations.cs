@@ -17,6 +17,8 @@ namespace CSharpEx.Basics
         #region Constructors
         public SimpleOperations(int a, int b)
         {
+            A = a;
+            B = b;
 
         } 
         #endregion
@@ -24,22 +26,27 @@ namespace CSharpEx.Basics
 
         public int Add()
         {
-            return 0;
+            int result = A + B;
+            return result;
         }
 
         public int Subtract()
+
         {
-            return 0;
+            int result = A - B;
+            return result;
         }
 
         public int Multiply()
         {
-            return 0;
+            int result = A * B;
+            return result;
         }
 
         public int Divide()
         {
-            return 0;
+            int result = A / B;
+            return result;
         }
 
         /// <summary>
@@ -48,17 +55,35 @@ namespace CSharpEx.Basics
         /// <returns></returns>
         public int Mean()
         {
-            return 0;
+            int result = (A + B) / 2;
+            return result;
         }
 
         public int Min()
         {
-            return 0;            
+            if (A<B)
+            {
+                return A;
+
+            }
+            else
+            {
+                return B;
+            }
+         
         }
 
         public int Max()
         {
-            return 0;            
+            if (A>B)
+            {
+                return A;
+            }
+            else
+            {
+                return B;
+            }
+       
         }
         #endregion
 
