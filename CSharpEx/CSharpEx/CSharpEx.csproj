@@ -54,6 +54,8 @@
     <Compile Include="Basics\Swapper.cs" />
     <Compile Include="Basics\Tests\SimpleOperationsTests.cs" />
     <Compile Include="Basics\Tests\SwapperTests.cs" />
+    <Compile Include="Basics\Tests\ValueOperations.cs" />
+    <Compile Include="Basics\PropertyOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
