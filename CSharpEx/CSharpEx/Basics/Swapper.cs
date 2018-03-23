@@ -10,7 +10,8 @@ namespace CSharpEx.Basics
     {
         public Swapper(int a, int b)
         {
-
+            A = a;
+            B = b;
         }
 
         public int A { get; set; }
@@ -18,7 +19,9 @@ namespace CSharpEx.Basics
 
         public void Swap()
         {
-            
+            int temp = A;
+            A = B;
+            B = temp;
         }
     }
 }
