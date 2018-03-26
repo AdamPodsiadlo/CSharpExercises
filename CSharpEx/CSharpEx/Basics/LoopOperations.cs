@@ -100,7 +100,6 @@ namespace CSharpEx.Basics
         public string StarPyramid(int n)
         {
             var sb = new StringBuilder();
-
             throw new NotImplementedException();
         }
 

@@ -114,7 +114,7 @@ namespace CSharpEx.Basics.Tests
         public void StarPatten(int n, string expected)
         {
             var result = Loop.StarPattern(n);
-
+            result = NormalizePattern(result);
             Assert.AreEqual(expected, result);
         }
 
@@ -144,7 +144,7 @@ namespace CSharpEx.Basics.Tests
         public void NumberPatten(int n, string expected)
         {
             var result = Loop.StarPattern(n);
-
+            result = NormalizePattern(result);
             Assert.AreEqual(expected, result);
         }
 
@@ -158,7 +158,7 @@ namespace CSharpEx.Basics.Tests
         [TestCase
 (4,
 @"   *
-  *** 
+  ***
  *****
 *******")]
         [TestCase
@@ -173,14 +173,21 @@ namespace CSharpEx.Basics.Tests
 ***************")]
         public void StarPyramid(int n, string expected)
         {
-            var result = Loop.StarPattern(n);
+            var result = Loop.StarPyramid(n);
 
 
+            result = NormalizePattern(result);
+            Assert.AreEqual(expected, result);
+        }
+
+        private static string NormalizePattern(string result)
+        {
             var lines = result.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-            var sb =new StringBuilder();
-            lines.Select(l => l.TrimEnd()).Select(l => sb.AppendLine(l));
+            var sb = new StringBuilder();
+            lines.Select(l => l.TrimEnd()).Select(l => sb.AppendLine(l)).ToArray();
 
-            Assert.AreEqual(expected, sb.ToString());
+            result = sb.ToString().TrimEnd();
+            return result;
         }
 
         [Test]
