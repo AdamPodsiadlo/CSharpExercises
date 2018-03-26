@@ -12,6 +12,14 @@ namespace CSharpEx.Geometry
         public double B { get; set; }
         public double C { get; set; }
 
+        /// <summary>
+        /// Creates new triangle
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <exception cref="ArgumentException">Throws if one side is less or equal to 0.</exception>
+        /// <exception cref="InvalidOperationException">Throws if edges don't form proper triangle.</exception>
         public Triangle(double a, double b, double c)
         {
             
