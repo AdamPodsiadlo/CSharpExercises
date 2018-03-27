@@ -213,8 +213,8 @@ namespace CSharpEx.Geometry.Tests
 
         [Test]
         [TestCase(3, 4, 5, 2.5)]
-        [TestCase(2, 2, 2, 1.73)]
-        [TestCase(6, 6, 3, 1.55)]
+        [TestCase(2, 2, 2, 1.15)]
+        [TestCase(6, 6, 3, 3.09)]
         public void ExCircleRadius(double a, double b, double c, double radius)
         {
             var tri = new Triangle(a, b, c);
