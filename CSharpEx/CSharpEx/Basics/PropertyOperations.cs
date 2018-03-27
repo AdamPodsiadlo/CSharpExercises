@@ -12,27 +12,32 @@ namespace CSharpEx.Basics
 
         public PropertyOperations(int value)
         {
-            
+            Value = value;
+
         }
 
         public void Increment()
         {
+            Value = Value + 1;
             
+
         }
 
         public void Decrement()
         {
-            
+            Value = Value - 1;
+
         }
 
         public void Clear()
         {
-            
+            Value = Value - Value;
+
         }
 
         public void Square()
         {
-            
+            Value = Value * Value;
         }
     }
 }

@@ -22,27 +22,62 @@ namespace CSharpEx.Geometry
         /// <exception cref="InvalidOperationException">Throws if edges don't form proper triangle.</exception>
         public Triangle(double a, double b, double c)
         {
-            
+            A = a;
+            B = b;
+            C = c;
         }
 
         public bool IsEquilateral()
         {
-            throw new NotImplementedException();
+            if (A == B && B == C)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+
+            }
+
         }
+
 
         public bool IsIsosceles()
         {
-            throw new NotImplementedException();
+            if (A == B || B == C)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         public bool IsRight()
         {
-            throw new NotImplementedException();
+            if (Math.Abs(C * C - (B * B + A * A)) < 0.02)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool IsObtuse()
         {
-            throw new NotImplementedException();
+            if (C * C > B * B + A * A)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         public bool IsAcute()
@@ -52,17 +87,39 @@ namespace CSharpEx.Geometry
 
         public double Area()
         {
-            throw new NotImplementedException();
+            var P = halfPerimeter();
+            double area = P * (P - A) * (P - B) * (P - C);
+            area = Math.Sqrt(area);
+            return area;
+        }
+
+        private double halfPerimeter()
+        {
+            double P = A + B + C;
+            P = P / 2;
+            return P;
         }
 
         public double InCircleRadius()
         {
-            throw new NotImplementedException();
+            double P = halfPerimeter();
+            double radius = (P - A) * (P - B) * (P - C);
+            radius = radius / P;
+            radius = Math.Sqrt(radius);
+            return radius;
         }
 
         public double ExCircleRadius()
         {
-            throw new NotImplementedException();
+            double P = halfPerimeter();
+            double R = A * B * C;
+            double radius = InCircleRadius();
+        
+            double D = radius * P;
+            D = 4 * D;
+            R = R / D;
+        
+            return R;
         }
     }
 }
