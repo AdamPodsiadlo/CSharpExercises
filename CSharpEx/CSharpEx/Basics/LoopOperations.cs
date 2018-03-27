@@ -15,7 +15,18 @@ namespace CSharpEx.Basics
         /// <returns></returns>
         public int Sum(int n)
         {
-            throw new NotImplementedException();
+            int result = 0;
+            var sb = new StringBuilder();
+            for (int i = 1; i <= n; i++)
+            {
+                sb.AppendLine("=====");
+                sb.AppendLine($"r {result} i {i}");
+                result = result + i;
+                sb.AppendLine($"r {result} i {i}");
+            }
+
+            var str = sb.ToString();
+            return result;
         }
 
         /// <summary>
@@ -26,7 +37,17 @@ namespace CSharpEx.Basics
         /// <returns></returns>
         public int Sum(int n, int start)
         {
-            throw new NotImplementedException();
+            int result = 0;
+            var sb = new StringBuilder();
+            for (int i = 0; i < n; i++)
+            {
+                int nextNumber = start + i;
+                result = result + nextNumber;
+                Console.WriteLine(i);
+            }
+
+                var str = sb.ToString();
+            return result;
         }
 
 

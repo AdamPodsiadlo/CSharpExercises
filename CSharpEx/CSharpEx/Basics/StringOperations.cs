@@ -23,7 +23,8 @@ namespace CSharpEx.Basics
             // User code
 
             var result = 0;
-
+            var words = input.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+            result = words.Length;
             // End of user code
             Assert.AreEqual(expected, result);
         }
@@ -37,7 +38,7 @@ namespace CSharpEx.Basics
         [TestCase(1234.4321, "Number: 1234.43")]
         public void DoubleFormating(double input, string expected)
         {
-            string result = "";
+            string result = $"fbhglef {input:F2}";
 
             Assert.AreEqual(expected, result);
         }

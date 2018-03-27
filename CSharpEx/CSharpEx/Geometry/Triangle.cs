@@ -22,6 +22,17 @@ namespace CSharpEx.Geometry
         /// <exception cref="InvalidOperationException">Throws if edges don't form proper triangle.</exception>
         public Triangle(double a, double b, double c)
         {
+            if (a <= 0 || b <= 0 || c <= 0)
+            {
+                throw new ArgumentException();
+            }
+
+            if ((a + b) <= c || (b + c) <= a || (a + c) <= b)
+            {
+                throw new InvalidOperationException();
+            }
+        
+
             A = a;
             B = b;
             C = c;
@@ -44,7 +55,7 @@ namespace CSharpEx.Geometry
 
         public bool IsIsosceles()
         {
-            if (A == B || B == C)
+            if (A == B || B == C || A == C)
             {
                 return true;
             }
@@ -57,7 +68,33 @@ namespace CSharpEx.Geometry
 
         public bool IsRight()
         {
-            if (Math.Abs(C * C - (B * B + A * A)) < 0.02)
+            double longest;
+            double short1;
+            double short2;
+
+            if (C >= B && C >= A)
+            {
+                longest = C;
+                short1 = A;
+                short2 = B;
+            }
+            else if (A >= B && A >= C)
+            {
+                longest = A;
+                short1 = C;
+                short2 = B;
+
+            }
+            else
+            {
+                longest = B;
+                short1 = A;
+                short2 = C;
+            }
+       
+        
+          
+            if (Math.Abs(longest * longest - (short1 * short1 + short2 * short2)) < 0.02)
             {
                 return true;
             }
@@ -82,7 +119,15 @@ namespace CSharpEx.Geometry
 
         public bool IsAcute()
         {
-            throw new NotImplementedException();
+            if (C * C < B * B + A * A)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         public double Area()
