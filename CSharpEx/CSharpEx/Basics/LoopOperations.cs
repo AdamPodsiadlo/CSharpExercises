@@ -102,9 +102,19 @@ namespace CSharpEx.Basics
         /// </summary>
         public int Factorial(int n)
         {
-            int result = 0;
-            var sb = new StringBuilder();
-            for (int )
+            int result = 1;
+           
+            for (int i = 2; i <= n; i++)
+
+            {
+                result = result * i;
+                
+
+                
+
+            }
+
+            return result;
         }
 
         /// <summary>
@@ -117,8 +127,23 @@ namespace CSharpEx.Basics
         /// <returns></returns>
         public string StarPattern(int n)
         {
+            int result = 0;
             var sb = new StringBuilder();
-            throw new NotImplementedException();
+            for (int i = 1; i <= n; i++)
+
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    sb.Append("*");
+                }
+
+                sb.AppendLine();
+
+            }
+
+            return sb.ToString();
+
+            
         }
 
         /// <summary>
