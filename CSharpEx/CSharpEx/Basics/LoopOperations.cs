@@ -41,8 +41,9 @@ namespace CSharpEx.Basics
             var sb = new StringBuilder();
             for (int i = 0; i < n; i++)
             {
-                int nextNumber = start + i;
-                result = result + nextNumber;
+                
+                result = result + start;
+                start = start + 1;
                 Console.WriteLine(i);
             }
 
@@ -60,7 +61,18 @@ namespace CSharpEx.Basics
         /// <returns></returns>
         public int Sum(int n, int start, int step)
         {
-            throw new NotImplementedException();
+            int result = 0;
+            var sb = new StringBuilder();
+            for (int i = 0; i < n; i++)
+
+            {
+                result = result + start;
+                start = start + step;
+            
+
+
+            }
+            return result;
         }
 
         /// <summary>
@@ -71,7 +83,18 @@ namespace CSharpEx.Basics
         /// <returns></returns>
         public int CountEven(int start, int end)
         {
-            throw new NotImplementedException();
+            int result = 0;
+            var sb = new StringBuilder();
+            for (int i = start; i <= end; i++)
+
+            {   if (i%2 == 0)
+                result = result + 1;
+          
+               
+
+            }
+
+            return result;
         }
 
         /// <summary>
@@ -79,7 +102,9 @@ namespace CSharpEx.Basics
         /// </summary>
         public int Factorial(int n)
         {
-            throw new NotImplementedException();
+            int result = 0;
+            var sb = new StringBuilder();
+            for (int )
         }
 
         /// <summary>
