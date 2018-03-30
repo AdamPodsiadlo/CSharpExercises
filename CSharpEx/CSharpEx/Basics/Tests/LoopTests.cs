@@ -36,8 +36,8 @@ namespace CSharpEx.Basics.Tests
         [TestCase(2, 1, 3)]
         [TestCase(1, 2, 2)]
         [TestCase(1, 10, 10)]
-        [TestCase(2, 10, 22)]
-        [TestCase(10, 10, 150)]
+        [TestCase(2, 10, 21)]
+        [TestCase(10, 10, 145)]
         public void Sum_TwoParams(int n, int start, int expected)
         {
             var result = Loop.Sum(n,start);
@@ -48,10 +48,11 @@ namespace CSharpEx.Basics.Tests
         [Test]
         [TestCase(1,1,1,1)]
         [TestCase(1, 2, 1, 2)]
-        [TestCase(2, 1, 3, 1)]
+        [TestCase(2, 1, 3, 5)]
         [TestCase(2, 2, 1, 5)]
         [TestCase(2, 5, 2, 12)]
-        [TestCase(10, 10, 2, 200)]
+        [TestCase(10, 10, 2, 190)]
+        [TestCase(3, 5, 2, 21)]
         public void Sum_ThreeParames(int n, int start, int step, int expected)
         {
             var result = Loop.Sum(n, start, step);

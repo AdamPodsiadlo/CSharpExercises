@@ -47,7 +47,7 @@ namespace CSharpEx.Geometry.Tests
         [Test]
         [TestCase(3, 1, 1)]
         [TestCase(1,3, 1)]
-        [TestCase(3, 3, 1)]
+        [TestCase(1, 1, 3)]
         public void Constructor_Throws_InvalidOperationException(double a, double b, double c)
         {
             Triangle tri;
