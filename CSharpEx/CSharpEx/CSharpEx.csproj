@@ -50,10 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basics\ArrayOperations.cs" />
     <Compile Include="Basics\LoopOperations.cs" />
     <Compile Include="Basics\SimpleOperations.cs" />
     <Compile Include="Basics\StringOperations.cs" />
     <Compile Include="Basics\Swapper.cs" />
+    <Compile Include="Basics\Tests\ArrayTests.cs" />
     <Compile Include="Basics\Tests\LoopTests.cs" />
     <Compile Include="Basics\Tests\SimpleOperationsTests.cs" />
     <Compile Include="Basics\Tests\SwapperTests.cs" />
