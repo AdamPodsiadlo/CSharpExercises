@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Basics\ArrayOperations.cs" />
     <Compile Include="Basics\LoopOperations.cs" />
+    <Compile Include="Basics\result.cs" />
     <Compile Include="Basics\SimpleOperations.cs" />
     <Compile Include="Basics\StringOperations.cs" />
     <Compile Include="Basics\Swapper.cs" />

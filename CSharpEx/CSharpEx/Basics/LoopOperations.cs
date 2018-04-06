@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,13 +42,13 @@ namespace CSharpEx.Basics
             var sb = new StringBuilder();
             for (int i = 0; i < n; i++)
             {
-                
+
                 result = result + start;
                 start = start + 1;
                 Console.WriteLine(i);
             }
 
-                var str = sb.ToString();
+            var str = sb.ToString();
             return result;
         }
 
@@ -68,10 +69,11 @@ namespace CSharpEx.Basics
             {
                 result = result + start;
                 start = start + step;
-            
+
 
 
             }
+
             return result;
         }
 
@@ -87,10 +89,11 @@ namespace CSharpEx.Basics
             var sb = new StringBuilder();
             for (int i = start; i <= end; i++)
 
-            {   if (i%2 == 0)
-                result = result + 1;
-          
-               
+            {
+                if (i % 2 == 0)
+                    result = result + 1;
+
+
 
             }
 
@@ -103,14 +106,14 @@ namespace CSharpEx.Basics
         public int Factorial(int n)
         {
             int result = 1;
-           
+
             for (int i = 2; i <= n; i++)
 
             {
                 result = result * i;
-                
 
-                
+
+
 
             }
 
@@ -129,10 +132,10 @@ namespace CSharpEx.Basics
         {
             int result = 0;
             var sb = new StringBuilder();
-            for (int i = 1; i <= n; i++)
+            for (int i = 0; i < n; i++)
 
             {
-                for (int j = 0; j < i; j++)
+                for (int j = 0; j < i + 1; j++)
                 {
                     sb.Append("*");
                 }
@@ -143,7 +146,7 @@ namespace CSharpEx.Basics
 
             return sb.ToString();
 
-            
+
         }
 
         /// <summary>
@@ -156,8 +159,22 @@ namespace CSharpEx.Basics
         /// <returns></returns>
         public string NumberPattern(int n)
         {
+            int result = 0;
             var sb = new StringBuilder();
-            throw new NotImplementedException();
+            for (int i = 1; i <= n; i++)
+
+            {
+                for (int j = 1; j < i + 1; j++)
+                {
+                    sb.Append($"{j}");
+                }
+
+                sb.AppendLine();
+
+            }
+
+            return sb.ToString();
+
         }
 
         /// <summary>
@@ -170,19 +187,80 @@ namespace CSharpEx.Basics
         /// <returns></returns>
         public string StarPyramid(int n)
         {
+
             var sb = new StringBuilder();
             throw new NotImplementedException();
+
+
+
+
+
+
         }
 
         public int HighestCommonFactor(int a, int b)
         {
-            throw new NotImplementedException();
+            int result = 0;
+            for (int i = 1; i <= Math.Min(a, b); i++)
+
+            {
+                if (a % i == 0 && b % i == 0)
+                    result = i;
+
+
+
+
+
+            }
+
+            return result;
+
+
         }
 
+
+
+
+
+
+
+
+
         public int LeastCommonMultiple(int a, int b)
+
         {
-            throw new NotImplementedException();
+            int result = 0;
+            for (int i = Math.Max(a, b); i < a * b; i++)
+
+            {
+                if (i % a == 0 && i % b == 0) 
+                {
+                    return i;
+
+
+
+                }
+
+                
+
+
+            }
+
+            return a * b;
+
+
+
         }
 
     }
 }
+
+   
+
+
+
+
+
+    
+
+

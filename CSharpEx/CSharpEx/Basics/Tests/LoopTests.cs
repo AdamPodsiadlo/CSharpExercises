@@ -144,7 +144,7 @@ namespace CSharpEx.Basics.Tests
 12345678")]
         public void NumberPatten(int n, string expected)
         {
-            var result = Loop.StarPattern(n);
+            var result = Loop.NumberPattern(n);
             result = NormalizePattern(result);
             Assert.AreEqual(expected, result);
         }
