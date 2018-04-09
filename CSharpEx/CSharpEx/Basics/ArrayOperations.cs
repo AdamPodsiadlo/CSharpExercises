@@ -22,5 +22,6 @@ namespace CSharpEx.Basics
         public int EvenCount() { throw new NotImplementedException(); }
         public int[] Add(int add) { throw new NotImplementedException(); }
         public int Sum() { throw new NotImplementedException(); }
+        public int[] Copy() { throw new NotImplementedException(); }
     }
 }
