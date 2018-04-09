@@ -57,6 +57,7 @@ namespace CSharpEx.Basics
         }
     
 
+<<<<<<< HEAD
     public int[] Reversed() { throw new NotImplementedException(); }
 
         public int EvenCount()
@@ -95,6 +96,14 @@ namespace CSharpEx.Basics
             return result;
 
         }
+=======
+        public int Min() { throw new NotImplementedException(); }
+        public int Max() { throw new NotImplementedException(); }
+        public int[] Reversed() { throw new NotImplementedException(); }
+        public int EvenCount() { throw new NotImplementedException(); }
+        public int[] Add(int add) { throw new NotImplementedException(); }
+        public int Sum() { throw new NotImplementedException(); }
         public int[] Copy() { throw new NotImplementedException(); }
+>>>>>>> origin/master
     }
 }

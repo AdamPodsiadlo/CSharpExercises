@@ -231,5 +231,28 @@ namespace CSharpEx.Basics.Tests
             Assert.AreEqual(expected, sum);
         }
 
+        [Test]
+        [TestCase(new[]
+        {
+            1, 2, 3
+        })]
+        [TestCase(new[]
+        {
+            5, 4, 1
+        })]
+        public void Copy(int[] array)
+        {
+            var ao = new ArrayOperations(array);
+
+            var result = ao.Copy();
+
+            Assert.AreNotSame(ao.Array, result);
+
+            CollectionAssert.AreEqual(array, result);
+        }
+
+
+
+
     }
 }
