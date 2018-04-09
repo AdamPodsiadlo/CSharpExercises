@@ -206,11 +206,6 @@ namespace CSharpEx.Basics
             {
                 if (a % i == 0 && b % i == 0)
                     result = i;
-
-
-
-
-
             }
 
             return result;
@@ -236,20 +231,10 @@ namespace CSharpEx.Basics
                 if (i % a == 0 && i % b == 0) 
                 {
                     return i;
-
-
-
                 }
-
-                
-
-
             }
 
             return a * b;
-
-
-
         }
 
     }
