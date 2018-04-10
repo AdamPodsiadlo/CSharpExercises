@@ -119,7 +119,7 @@ namespace CSharpEx.Basics.Tests
             3, 2, 1
         }, new[]
         {
-            3, 2, 1
+            1, 2, 3
         })]
         public void Reverse(int[] array, int[] expected)
         {

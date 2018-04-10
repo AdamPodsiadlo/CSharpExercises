@@ -44,5 +44,13 @@ namespace CSharpEx.Basics
         }
 
 
+        [Test]
+        [TestCase("kkk kkkkk", "kkkk")]
+        public void LongestWord(string input, string expected)
+        {
+
+
+           
+        }
     }
 }

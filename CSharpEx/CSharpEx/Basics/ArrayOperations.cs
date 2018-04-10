@@ -55,9 +55,21 @@ namespace CSharpEx.Basics
 
             return result;
         }
-    
 
-    public int[] Reversed() { throw new NotImplementedException(); }
+
+        public int[] Reversed()
+        {
+            var tab = new int[Array.Length];
+            for (int i = 0; i < Array.Length; i++)
+            {
+                int index = Array.Length - 1;
+                index = index - i;
+                tab[i] = Array[index];
+                
+            }
+
+            return tab;
+        }
 
         public int EvenCount()
         {
@@ -77,13 +89,19 @@ namespace CSharpEx.Basics
         public int[] Add(int add)
         {
             var tab = new int[Array.Length];
-            int result = 0;
-            for 
+            for (int i = 0; i < Array.Length; i++)
+            {
+                tab[i] = Array[i] + add;
+              
+            }
+
+            return tab;
         }
 
         public int Sum()
 
         {
+
             int result = 0;
             
             for (int i = 0; i < Array.Length; i++)
@@ -95,6 +113,19 @@ namespace CSharpEx.Basics
             return result;
 
         }
-        public int[] Copy() { throw new NotImplementedException(); }
+
+        public int[] Copy()
+        {
+            int[] result = new int[Array.Length];
+            for (int i = 0; i < Array.Length; i++)
+            {
+
+                result[i] = Array[i];
+
+
+            }
+
+            return result;
+        }
     }
 }
