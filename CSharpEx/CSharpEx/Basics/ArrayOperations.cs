@@ -121,8 +121,6 @@ namespace CSharpEx.Basics
             {
 
                 result[i] = Array[i];
-
-
             }
 
             return result;

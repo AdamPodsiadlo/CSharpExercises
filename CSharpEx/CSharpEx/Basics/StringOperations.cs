@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
@@ -51,8 +52,23 @@ namespace CSharpEx.Basics
         public void LongestWord(string input, string expected)
         {
             string result = string.Empty;
+            string[] array = input.Split(new []{' '}, StringSplitOptions.RemoveEmptyEntries);
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i].Length > result.Length)
+                {
+                    result = array[i];
+                }
+
+            }
 
            Assert.AreEqual(expected, result);
+        }
+
+        public void Main(string[] argStrings)
+        {
+            Console.WriteLine("Hello world");
+            Console.ReadKey();
         }
     }
 }
