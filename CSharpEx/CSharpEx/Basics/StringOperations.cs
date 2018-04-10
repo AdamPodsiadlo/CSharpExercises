@@ -45,12 +45,14 @@ namespace CSharpEx.Basics
 
 
         [Test]
-        [TestCase("kkk kkkkk", "kkkk")]
+        [TestCase("abcd abcdefg abcdefghij", "abcdefghij")]
+        [TestCase("longword longestword longerword", "longestword")]
+        [TestCase("Jurassic Park", "Jurassic")]
         public void LongestWord(string input, string expected)
         {
+            string result = string.Empty;
 
-
-           
+           Assert.AreEqual(expected, result);
         }
     }
 }
